@@ -1,11 +1,44 @@
 def to_roman(num)
   # Your code here
+  value = "" #number that we will return
+
+  if num < 0
+  	puts 'Please enter a number that isn\'t negative'
+  elsif num == 0
+  	puts '0'
+  else
+  	if num < 10
+  		insertBefore(num)
+  	end
+  end
 end
+
+def insertBefore(num)
+	if num < 5
+		puts "I"*num; # times the value
+	elsif num > 5
+		puts letter(num) + "I"*(num-5)
+	else
+		puts ""
+	end	
+end
+
+def letter(num)
+	value = num%10
+end
+
 
 # Drive code... this should print out trues.
 
-puts to_roman(1) == "I"
-puts to_roman(3) == "III"
-puts to_roman(6) == "VI"
+#puts to_roman(1) == "I"
+#puts to_roman(3) == "III"
+#puts to_roman(6) == "VI"
+
+
+letters = ["I","V","X","L","C","D","M"]
+number = [1,5,10,50,100,500,1000]
+
+
 
 # TODO: what other cases could you add to ensure your to_roman method is working?
+to_roman(gets.chomp.to_i)
