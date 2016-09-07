@@ -11,19 +11,25 @@ def to_roman(num)
 		elsif num >= 100
 			value = value + "C"
 			num = num - 100
+		elsif num >= 90
+			value = value + "XC"
+			num = num - 90
 		elsif num >= 50
 			value = value + "L"
 			num = num - 50
+		elsif num >= 40
+			value = value + "XL"
+			num = num - 40	
 		elsif num >= 10
 			value = value + "X"
 			num = num - 10
-		elsif num >= 9
+		elsif num == 9
 			value = value + "IX"
 			num = num - 10	
 		elsif num >= 5
 			value = value + "V"
 			num = num - 5
-		elsif num == 4
+		elsif num >= 4
 			value = value +"IV"
 			num = num - 4
 		else 
