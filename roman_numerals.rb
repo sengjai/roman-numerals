@@ -5,9 +5,15 @@ def to_roman(num)
 		if num >= 1000
 			value = "M"
 			num = num - 1000
+		if num >= 900
+			value = "CM"
+			num = num - 900
 		elsif num >= 500
 			value = value + "D"
 			num = num - 500
+		elsif num >= 400
+			value = value + "CD"
+			num = num - 400
 		elsif num >= 100
 			value = value + "C"
 			num = num - 100
