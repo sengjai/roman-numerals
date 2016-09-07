@@ -17,9 +17,15 @@ def to_roman(num)
 		elsif num >= 10
 			value = value + "X"
 			num = num - 10
+		elsif num >= 9
+			value = value + "IX"
+			num = num - 10	
 		elsif num >= 5
 			value = value + "V"
 			num = num - 5
+		elsif num == 4
+			value = value +"IV"
+			num = num - 4
 		else 
 			value = value + "I"
 			num = num - 1
