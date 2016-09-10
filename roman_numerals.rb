@@ -5,7 +5,7 @@ def to_roman(num)
 		if num >= 1000
 			value = "M"
 			num = num - 1000
-		if num >= 900
+		elsif num >= 900
 			value = "CM"
 			num = num - 900
 		elsif num >= 500
@@ -36,17 +36,15 @@ def to_roman(num)
 			value = value + "V"
 			num = num - 5
 		elsif num >= 4
-			value = value +"IV"
+			value = value + "IV"
 			num = num - 4
 		else 
 			value = value + "I"
 			num = num - 1
 		end
 	end
-
 	p value
 
 end
 
 to_roman(gets.chomp.to_i)
-#puts to_roman(6) == "VI"
